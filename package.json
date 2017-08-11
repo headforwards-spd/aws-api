@@ -1,5 +1,5 @@
 {
-  "name":            "aws api",
+  "name":            "aws-api-cognito",
   "version":         "1.0.0",
   "description":     "Utility functions for aws api",
   "main":            "index.js",
@@ -15,10 +15,7 @@
   "bugs":            {
     "url": "https://github.com/headforwards-spd/aws-api/issues"
   },
-  "devDependencies": {
-  },
-  "dependencies":    {
-
-  },
+  "devDependencies": {},
+  "dependencies":    {},
   "homepage":        "https://github.com/headforwards-spd/aws-api#readme"
 }
