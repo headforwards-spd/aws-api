@@ -1,0 +1,24 @@
+{
+  "name":            "aws api",
+  "version":         "1.0.0",
+  "description":     "Utility functions for aws api",
+  "main":            "index.js",
+  "scripts":         {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository":      {
+    "type": "git",
+    "url":  "git+https://github.com/headforwards-spd/aws-api.git"
+  },
+  "author":          "",
+  "license":         "ISC",
+  "bugs":            {
+    "url": "https://github.com/headforwards-spd/aws-api/issues"
+  },
+  "devDependencies": {
+  },
+  "dependencies":    {
+
+  },
+  "homepage":        "https://github.com/headforwards-spd/aws-api#readme"
+}
