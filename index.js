@@ -8,6 +8,7 @@ module.exports.handleError       = handleError;
 module.exports.extractNew        = extractNew;
 module.exports.extractData       = extractData;
 module.exports.extractJwt        = extractJwt;
+module.exports.extractUserAgent  = extractUserAgent;
 module.exports.getPathParam      = getPathParam;
 
 
@@ -87,4 +88,9 @@ function getPathParam(param, event) {
 function extractJwt(event) {
 
     return event.authorizationToken;
+}
+
+function extractUserAgent(event) {
+    
+    return event.headers['User-Agent'];
 }
