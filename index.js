@@ -7,6 +7,7 @@ module.exports.handleSuccess     = handleSuccess;
 module.exports.handleError       = handleError;
 module.exports.extractNew        = extractNew;
 module.exports.extractData       = extractData;
+module.exports.extractJwt        = extractJwt;
 module.exports.getPathParam      = getPathParam;
 
 
@@ -81,4 +82,9 @@ function extractData(event) {
 function getPathParam(param, event) {
 
     return event.pathParameters[param];
+}
+
+function extractJwt(event) {
+
+    return event.authorizationToken;
 }
