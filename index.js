@@ -1,16 +1,17 @@
 'use strict';
-const uuid           = require('uuid');
 
-module.exports.getUserId         = getUserId;
-module.exports.checkUserGroup    = checkUserGroup;
-module.exports.handleSuccess     = handleSuccess;
-module.exports.handleError       = handleError;
-module.exports.extractNew        = extractNew;
-module.exports.extractData       = extractData;
-module.exports.extractJwt        = extractJwt;
-module.exports.extractUserAgent  = extractUserAgent;
-module.exports.getPathParam      = getPathParam;
+const uuid = require('uuid');
 
+module.exports = {
+    getUserId:        getUserId,
+    checkUserGroup:   checkUserGroup,
+    handleSuccess:    handleSuccess,
+    handleError:      handleError,
+    extractNew:       extractNew,
+    extractData:      extractData,
+    extractUserAgent: extractUserAgent,
+    getPathParam:     getPathParam
+};
 
 function getUserId(event) {
 
@@ -29,7 +30,7 @@ function checkUserGroup(event, group) {
 
         try {
 
-            let groups = event.requestContext.authorizer.claims['cognito:groups'].split(",");
+            let groups = event.requestContext.authorizer.claims['cognito:groups'].split(',');
 
             groups.indexOf(group) !== -1 && resolve() || reject();
 
@@ -46,14 +47,26 @@ function handleSuccess(data, callback) {
 
     let response = {
         statusCode: statusCode,
-        headers:    {'Access-Control-Allow-Origin': '*'},
+        headers:    {
+            'Access-Control-Allow-Origin': '*'
+        },
         body:       JSON.stringify(data)
     };
+
+    !!process.env.hasOwnProperty('version') && Object.assign(
+        response.headers,
+        {
+            'Access-Control-Expose-Headers': 'Content-Version',
+            'Content-Version':               process.env.version
+        });
 
     callback(null, response);
 }
 
 function handleError(error, callback, message) {
+
+    console.log('error', error);
+    console.log('message', message);
 
     message = message || error;
 
@@ -82,15 +95,18 @@ function extractData(event) {
 
 function getPathParam(param, event) {
 
-    return event.pathParameters[param];
-}
+    try {
 
-function extractJwt(event) {
+        return event.pathParameters[param];
 
-    return event.authorizationToken;
+    } catch (error) {
+
+        return null;
+    }
+
 }
 
 function extractUserAgent(event) {
-    
+
     return event.headers['User-Agent'];
 }
