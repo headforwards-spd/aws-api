@@ -1,81 +1,25 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "aws-api-cognito@^1.0.1",
-        "scope": null,
-        "escapedName": "aws-api-cognito",
-        "name": "aws-api-cognito",
-        "rawSpec": "^1.0.1",
-        "spec": ">=1.0.1 <2.0.0",
-        "type": "range"
-      },
-      "/Users/andyweir/repos/AnyWaste/api"
+    "name":         "@headforwards-spd/aws-lambda",
+    "version":      "1.0.0",
+    "description":  "A handful of utility tools for AWS lambda functions",
+    "main":         "index.js",
+    "scripts":      {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository":   {
+        "type": "git",
+        "url":  "git+https://github.com/headforwards-spd/aws-api.git"
+    },
+    "bugs":         {
+        "url": "https://github.com/headforwards-spd/aws-api/issues"
+    },
+    "dependencies": {
+        "aws-sdk": "^2.141.0"
+    },
+    "homepage":     "https://github.com/headforwards-spd/aws-api#readme",
+    "keywords":     [
+        "AWS",
+        "lambda",
+        "nodeJS"
     ]
-  ],
-  "_from": "aws-api-cognito@>=1.0.1 <2.0.0",
-  "_id": "aws-api-cognito@1.0.1",
-  "_inCache": true,
-  "_location": "/aws-api-cognito",
-  "_nodeVersion": "6.11.1",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/aws-api-cognito-1.0.1.tgz_1502791404951_0.7467904093209654"
-  },
-  "_npmUser": {
-    "name": "kernowjoe",
-    "email": "kernowjoe@gmail.com"
-  },
-  "_npmVersion": "3.10.10",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "aws-api-cognito@^1.0.1",
-    "scope": null,
-    "escapedName": "aws-api-cognito",
-    "name": "aws-api-cognito",
-    "rawSpec": "^1.0.1",
-    "spec": ">=1.0.1 <2.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "https://registry.npmjs.org/aws-api-cognito/-/aws-api-cognito-1.0.1.tgz",
-  "_shasum": "6dc79e7e5ab4e6b9ea49ac29253073b6cd68ad0a",
-  "_shrinkwrap": null,
-  "_spec": "aws-api-cognito@^1.0.1",
-  "_where": "/Users/andyweir/repos/AnyWaste/api",
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/headforwards-spd/aws-api/issues"
-  },
-  "dependencies": {},
-  "description": "Utility functions for aws api",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "6dc79e7e5ab4e6b9ea49ac29253073b6cd68ad0a",
-    "tarball": "https://registry.npmjs.org/aws-api-cognito/-/aws-api-cognito-1.0.1.tgz"
-  },
-  "gitHead": "e5558238b4e17c764e53b157924ce2ca533e2773",
-  "homepage": "https://github.com/headforwards-spd/aws-api#readme",
-  "license": "ISC",
-  "main": "index.js",
-  "maintainers": [
-    {
-      "name": "kernowjoe",
-      "email": "kernowjoe@gmail.com"
-    }
-  ],
-  "name": "aws-api-cognito",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/headforwards-spd/aws-api.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.1.0"
 }
